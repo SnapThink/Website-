@@ -88,19 +88,21 @@ export default function HomePage() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12 text-center">
-              <Card>
-                <CardHeader>
-                  <Shield className="h-10 w-10 mb-2 text-primary" />
-                  <CardTitle>Complete Privacy</CardTitle>
-                  <CardDescription>
-                    Your data never leaves your infrastructure. Full compliance with GDPR, HIPAA, and enterprise
+
+        <Card>
+            <CardHeader className="text-center">
+            <Shield className="h-10 w-10 mb-2 text-primary mx-auto" />
+            <CardTitle>Complete Privacy</CardTitle>
+            <CardDescription>
+             Your data never leaves your infrastructure. Full compliance with GDPR, HIPAA, and enterprise
                     security requirements.
-                  </CardDescription>
-                </CardHeader>
-              </Card>
+            </CardDescription>
+            </CardHeader>
+        </Card>
+
               <Card>
                 <CardHeader>
-                  <Zap className="h-10 w-10 mb-2 text-primary" />
+                  <Zap className="h-10 w-10 mb-2 text-primary mx-auto" />
                   <CardTitle>Zero Latency</CardTitle>
                   <CardDescription>
                     Lightning-fast responses with local processing. No network delays or API rate limits to slow you
@@ -110,7 +112,7 @@ export default function HomePage() {
               </Card>
               <Card>
                 <CardHeader>
-                  <Server className="h-10 w-10 mb-2 text-primary" />
+                  <Server className="h-10 w-10 mb-2 text-primary mx-auto" />
                   <CardTitle>Your Infrastructure</CardTitle>
                   <CardDescription>
                     Deploy on your existing servers, cloud, or edge devices. Full control over scaling and resource
@@ -136,8 +138,8 @@ export default function HomePage() {
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12 text-center">
               <Card>
                 <CardHeader>
-                  <CardTitle className="flex items-center justify-between">
-                    Llama 2 & Code Llama
+                  <CardTitle className="flex flex-wrap items-center justify-between gap-2 text-left">
+                    <span>Llama 2 & Code Llama</span>
                     <Badge variant="secondary">Popular</Badge>
                   </CardTitle>
                   <CardDescription>
