@@ -1,4 +1,4 @@
-// File: C:\Users\sarve\OneDrive\Snapthink\website\local-llm-website\app\layout.tsx
+// File: C:\Users\sarve\OneDrive\Snapthink\Website-\Website-\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
