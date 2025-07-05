@@ -5,16 +5,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import ScheduleDemoModal  from '@/components/ScheduleDemoModal'
 import ContactSalesModal from '@/components/ContactSalesModal'
-
+import Image from 'next/image'
 
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navigation */}
       <header className="px-4 lg:px-6 h-14 flex items-center border-b">
-        <Link className="flex items-center justify-center" href="/">
-          <Brain className="h-6 w-6 mr-2" />
-          <span className="font-bold">LocalAI</span>
+        <Link className="flex items-center space-x-2" href="/">
+            <Image src="/icon.jpg" alt="Snapthink Logo" width={40} height={40} />
+            <span className="text-2xl font-normal" style={{ fontFamily: 'Segoe UI' }}>Snapthink</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6 text-center">
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="#features">
@@ -287,7 +287,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center justify-center px-4 md:px-6 border-t text-center">
-        <p className="text-xs text-muted-foreground">© 2024 LocalAI. All rights reserved.</p>
+        <p className="text-xs text-muted-foreground">© 2024 SnapThink. All rights reserved.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link className="text-xs hover:underline underline-offset-4" href="#">
             Terms of Service

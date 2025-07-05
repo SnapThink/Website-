@@ -891,9 +891,6 @@ video {
 .min-h-svh {
   min-height: 100svh;
 }
-.min-h-\[220px\] {
-  min-height: 220px;
-}
 .w-0 {
   width: 0px;
 }
@@ -926,9 +923,6 @@ video {
 }
 .w-5 {
   width: 1.25rem;
-}
-.w-6 {
-  width: 1.5rem;
 }
 .w-64 {
   width: 16rem;
@@ -1499,6 +1493,10 @@ video {
   font-size: 0.75rem;
   line-height: 1rem;
 }
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -1784,6 +1782,8 @@ video {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-weight: 400; /* Normal weight */
 }
 
 .file\:border-0::file-selector-button {
