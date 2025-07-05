@@ -3,6 +3,9 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import ScheduleDemoModal  from '@/components/ScheduleDemoModal'
+import ContactSalesModal from '@/components/ContactSalesModal'
+
 
 export default function HomePage() {
   return (
@@ -32,7 +35,7 @@ export default function HomePage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-          <div className="container px-4 md:px-6">
+          <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
@@ -51,9 +54,9 @@ export default function HomePage() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
                 </a>
-                <Button variant="outline" size="lg">
+                {/*<Button variant="outline" size="lg">
                   View Demo
-                </Button>
+                </Button>*/}
               </div>
               <div className="flex items-center space-x-4 text-sm text-muted-foreground">
                 <div className="flex items-center">
@@ -75,7 +78,7 @@ export default function HomePage() {
 
         {/* Features Section */}
         <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
-          <div className="container px-4 md:px-6">
+          <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Why Choose Local AI?</h2>
@@ -121,7 +124,7 @@ export default function HomePage() {
 
         {/* Models Section */}
         <section id="models" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Integrated Models</h2>
@@ -208,7 +211,7 @@ export default function HomePage() {
 
         {/* About Section */}
         <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
-          <div className="container px-4 md:px-6">
+          <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2 text-center">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
@@ -218,13 +221,10 @@ export default function HomePage() {
                     designed from the ground up for security, scalability, and reliability.
                   </p>
                 </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button>
-                    Schedule Demo
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                  <Button variant="outline">Read Documentation</Button>
-                </div>
+                <div className="flex justify-center mt-6 space-x-4">
+                   <ScheduleDemoModal />
+                   <Button variant="outline">Read Documentation</Button>
+                 </div>
               </div>
               <div className="grid gap-4">
                 <Card>
@@ -260,7 +260,7 @@ export default function HomePage() {
 
         {/* CTA Section */}
         <section id="contact" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Ready to Deploy Local AI?</h2>
@@ -269,14 +269,12 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="space-x-4">
-                <Button size="lg">
-                  Start Free Trial
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-                <Button variant="outline" size="lg">
-                  Contact Sales
-                </Button>
-              </div>
+                 <Button size="lg">
+                     Start Free Trial
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                    <ContactSalesModal />
+               </div>
               <p className="text-xs text-muted-foreground">
                 No credit card required • 30-day free trial • Enterprise support included
               </p>
