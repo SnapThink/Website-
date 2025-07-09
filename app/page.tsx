@@ -51,7 +51,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="space-x-4">
-                <DownloadExeModal />
+                <Button>Test Download</Button>
               </div>
               <div className="flex items-center space-x-4 text-sm text-muted-foreground">
                 <div className="flex items-center">
