@@ -49,7 +49,6 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="space-x-4">
-                <div className="space-x-4">
                 <DownloadExeModal />
                 {/*<Button variant="outline" size="lg">View Demo</Button>*/}
                 {/*<Button variant="outline" size="lg">
