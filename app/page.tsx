@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import ScheduleDemoModal  from '@/components/ScheduleDemoModal'
 import ContactSalesModal from '@/components/ContactSalesModal'
 import Image from 'next/image'
-import DownloadExeModal from "@/components/DownloadExeModal"
+import DownloadExeModal from '@/components/DownloadExeModal'
 
 export default function HomePage() {
   return (
