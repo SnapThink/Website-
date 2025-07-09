@@ -100,7 +100,8 @@ export default function HomePage() {
             <Brain className="h-10 w-10 mb-2 text-primary mx-auto" />
             <CardTitle>RAG Features</CardTitle>
             <CardDescription>
-             Deliver accurate, context-aware responses grounded in your private data.
+             Deliver accurate, context-aware responses grounded in your private data - all processed securely on your 
+            infrastructure.
             </CardDescription>
             </CardHeader>
           </Card>
