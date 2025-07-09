@@ -84,16 +84,26 @@ export default function HomePage() {
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12 text-center">
 
-        <Card>
+          <Card>
             <CardHeader className="text-center">
             <Shield className="h-10 w-10 mb-2 text-primary mx-auto" />
             <CardTitle>Complete Privacy</CardTitle>
             <CardDescription>
-             Your data never leaves your infrastructure. Full compliance with GDPR, HIPAA, and enterprise
+             Your data never leaves your infrastructure. GDPR Ready, HIPAA, and enterprise
                     security requirements.
             </CardDescription>
             </CardHeader>
-        </Card>
+          </Card>
+
+          <Card>
+            <CardHeader className="text-center">
+            <Shield className="h-10 w-10 mb-2 text-primary mx-auto" />
+            <CardTitle>RAG Features</CardTitle>
+            <CardDescription>
+             Deliver accurate, context-aware responses grounded in your private data.
+            </CardDescription>
+            </CardHeader>
+          </Card>
 
               <Card>
                 <CardHeader>
