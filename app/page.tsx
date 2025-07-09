@@ -52,10 +52,6 @@ export default function HomePage() {
               </div>
               <div className="space-x-4">
                 <DownloadExeModal />
-                {/*<Button variant="outline" size="lg">View Demo</Button>*/}
-                {/*<Button variant="outline" size="lg">
-                  View Demo
-                </Button>*/}
               </div>
               <div className="flex items-center space-x-4 text-sm text-muted-foreground">
                 <div className="flex items-center">
