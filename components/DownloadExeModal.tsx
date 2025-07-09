@@ -20,7 +20,7 @@ function DownloadButton() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          data: [{ ExeDownloads }],
+          data: [{ ExeDownloads: email }],
         }),
       });
 
@@ -65,3 +65,4 @@ function DownloadButton() {
     </div>
   );
 }
+export default DownloadButton;
