@@ -1,3 +1,5 @@
+'use client'
+
 import { ArrowRight, Brain, Shield, Zap, Server, Users, CheckCircle } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
