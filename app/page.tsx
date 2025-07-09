@@ -97,7 +97,7 @@ export default function HomePage() {
 
           <Card>
             <CardHeader className="text-center">
-            <Brain className="h-5 w-5 text-primary mx-auto" />
+            <Brain className="h-10 w-10 mb-2 text-primary mx-auto" />
             <CardTitle>RAG Features</CardTitle>
             <CardDescription>
              Deliver accurate, context-aware responses grounded in your private data.
