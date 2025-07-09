@@ -1,8 +1,9 @@
 'use client'
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button"
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input"; // Make sure you have this component
 
 function DownloadExeModal() {
   const [showForm, setShowForm] = useState(false);
@@ -25,11 +26,12 @@ function DownloadExeModal() {
       });
 
       if (response.ok) {
-        // Redirect to Google Drive file (must be shared as "Anyone with link can view")
         window.open(
           "https://drive.google.com/file/d/1VsyIUYSXItl5lFBECnJ7CRKFjJaeKHed/view?usp=drive_link",
           "_blank"
         );
+        setShowForm(false); // close modal
+        setEmail(""); // reset email
       } else {
         alert("Failed to submit. Try again.");
       }
@@ -42,27 +44,41 @@ function DownloadExeModal() {
   };
 
   return (
-    <div className="space-x-4">
-      <button onClick={() => setShowForm(true)} className="btn-lg">
+    <>
+      <Button
+        variant="default"
+        className="bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-500 dark:hover:bg-blue-600"
+        onClick={() => setShowForm(true)}
+      >
         Download exe
-      </button>
+      </Button>
 
-      {showForm && (
-        <form onSubmit={handleSubmit} className="mt-4 space-y-2">
-          <input
-            type="email"
-            placeholder="Enter your Gmail"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="input border px-2 py-1"
-          />
-          <button type="submit" disabled={loading} className="btn-lg bg-blue-500 text-white">
-            {loading ? "Submitting..." : "Submit & Download"}
-          </button>
-        </form>
-      )}
-    </div>
+      <Dialog open={showForm} onOpenChange={setShowForm}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Enter Your Gmail to Download</DialogTitle>
+          </DialogHeader>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <Input
+              type="email"
+              placeholder="your-email@gmail.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="w-full"
+            />
+            <Button
+              type="submit"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-500 dark:hover:bg-blue-600"
+              disabled={loading}
+            >
+              {loading ? "Submitting..." : "Submit & Download"}
+            </Button>
+          </form>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 }
+
 export default DownloadExeModal;
