@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'SnapThink',
-  description: 'Created with v0',
+  description: 'Platform for LLMs',
   generator: 'Snapthink',
 }
 
