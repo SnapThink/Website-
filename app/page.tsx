@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import ScheduleDemoModal  from '@/components/ScheduleDemoModal'
 import ContactSalesModal from '@/components/ContactSalesModal'
 import Image from 'next/image'
+import DownloadExeModal from "@/components/DownloadExeModal"
 
 export default function HomePage() {
   return (
@@ -48,12 +49,9 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="space-x-4">
-                <a href="https://drive.google.com/file/d/1V8xnsDMrsTLAOCaQR_6rBqKc8MdqT3GQ/view?usp=drive_link" target="_blank">
-                <Button size="lg">
-                  Download exe
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-                </a>
+                <div className="space-x-4">
+                <DownloadExeModal />
+                {/*<Button variant="outline" size="lg">View Demo</Button>*/}
                 {/*<Button variant="outline" size="lg">
                   View Demo
                 </Button>*/}
