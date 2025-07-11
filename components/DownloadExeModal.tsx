@@ -46,35 +46,62 @@ function DownloadExeModal() {
   return (
     <>
       <Button
-        variant="default"
         className="bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-500 dark:hover:bg-blue-600"
         onClick={() => setShowForm(true)}
       >
-        Download exe
+        Get Started Free
       </Button>
 
       <Dialog open={showForm} onOpenChange={setShowForm}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <DialogTitle>Enter Your Gmail to Download</DialogTitle>
+            <DialogTitle>Get Started with SnapThink</DialogTitle>
           </DialogHeader>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <Input
-              type="email"
-              placeholder="your-email@gmail.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="w-full"
-            />
-            <Button
-              type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-500 dark:hover:bg-blue-600"
-              disabled={loading}
-            >
-              {loading ? "Submitting..." : "Submit & Download"}
-            </Button>
-          </form>
+          <div className="space-y-4">
+            <p className="text-sm text-muted-foreground">
+              Enter your email to download SnapThink for Windows and start using local AI. Completely free to get started.
+            </p>
+            <div className="flex items-center gap-2 text-xs text-muted-foreground bg-muted/50 p-2 rounded">
+              <span>💻</span>
+              <span>Windows only • Mac and Linux versions coming soon</span>
+            </div>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <Input
+                type="email"
+                placeholder="your-email@company.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="w-full"
+              />
+              <Button
+                type="submit"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-500 dark:hover:bg-blue-600"
+                disabled={loading}
+              >
+                {loading ? "Processing..." : "Download for Windows"}
+              </Button>
+            </form>
+            
+            {/* Legal Disclaimers */}
+            <div className="space-y-2 pt-2 border-t">
+              <p className="text-xs text-muted-foreground">
+                By downloading, you consent to us using your email for product updates and support.
+              </p>
+              <p className="text-xs text-muted-foreground">
+                • Download starts immediately after submitting your email
+              </p>
+              <p className="text-xs text-muted-foreground">
+                • We may send occasional product updates (you can unsubscribe anytime)
+              </p>
+              <p className="text-xs text-muted-foreground">
+                • Free to use while we're building our community
+              </p>
+              <p className="text-xs text-muted-foreground">
+                • Your data stays private and is never shared with third parties
+              </p>
+            </div>
+          </div>
         </DialogContent>
       </Dialog>
     </>

@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowRight, Brain, Shield, Zap, Server, Users, CheckCircle } from "lucide-react"
+import { ArrowRight, Brain, Shield, Zap, Server, Users, CheckCircle, Search } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -14,22 +14,24 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navigation */}
-      <header className="px-4 lg:px-6 h-14 flex items-center border-b">
-        <Link className="flex items-center space-x-2" href="/">
-            <Image src="/icon.jpg" alt="Snapthink Logo" width={40} height={40} />
-            <span className="text-2xl font-normal" style={{ fontFamily: 'Segoe UI' }}>Snapthink</span>
+      <header className="px-4 lg:px-6 h-16 flex items-center justify-between border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+        <Link className="flex items-center space-x-2 flex-shrink-0" href="/">
+            <Image src="/icon.jpg" alt="Snapthink Logo" width={32} height={32} className="rounded-md" />
+            <span className="text-lg font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent hidden sm:block">
+              SnapThink
+            </span>
         </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6 text-center">
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#features">
+        <nav className="flex gap-2 sm:gap-4 lg:gap-6 text-center">
+          <Link className="text-xs sm:text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#features">
             Features
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#models">
+          <Link className="text-xs sm:text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#models">
             Models
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#about">
+          <Link className="text-xs sm:text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#about">
             About
           </Link>
-          <Link className="text-sm font-medium hover:underline underline-offset-4" href="#contact">
+          <Link className="text-xs sm:text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#contact">
             Contact
           </Link>
         </nav>
@@ -41,6 +43,8 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
+                <h1 className="text-3xl font-normal" style={{ fontFamily: 'Segoe UI' }}>SnapThink</h1>
+
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                   Enterprise AI That Stays
                   <span className="text-primary"> Local</span>
@@ -82,7 +86,7 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12 text-center">
+            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 xl:grid-cols-3 lg:gap-12 text-center">
 
           <Card>
             <CardHeader className="text-center">
@@ -102,6 +106,16 @@ export default function HomePage() {
             <CardDescription>
              Deliver accurate, context-aware responses grounded in your private data - all processed securely on your 
             infrastructure.
+            </CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card>
+            <CardHeader className="text-center">
+            <Search className="h-10 w-10 mb-2 text-primary mx-auto" />
+            <CardTitle>Semantic Search</CardTitle>
+            <CardDescription>
+             Upload your local documents and get intelligent search capabilities within chat sessions. Find relevant information instantly.
             </CardDescription>
             </CardHeader>
           </Card>
@@ -239,12 +253,12 @@ export default function HomePage() {
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-2">
                       <Users className="h-5 w-5" />
-                      Trusted by 500+ Companies
+                      Built for Modern Teams
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="text-center">
                     <p className="text-sm text-muted-foreground">
-                      From startups to Fortune 500 companies, organizations trust us with their AI infrastructure.
+                      Designed for forward-thinking organizations ready to embrace the future of AI infrastructure.
                     </p>
                   </CardContent>
                 </Card>
@@ -252,12 +266,12 @@ export default function HomePage() {
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-2">
                       <Shield className="h-5 w-5" />
-                      Enterprise Security
+                      Privacy-First Architecture
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="text-center">
                     <p className="text-sm text-muted-foreground">
-                      SOC 2 Type II certified with comprehensive security controls and compliance frameworks.
+                      Local LLM deployment ensures your sensitive data never leaves your infrastructure, maintaining complete privacy and control.
                     </p>
                   </CardContent>
                 </Card>
@@ -273,7 +287,7 @@ export default function HomePage() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Ready to Deploy Local AI?</h2>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Join hundreds of companies already using our platform. Get started with a free consultation.
+                  Get started with our free trial and experience the power of local AI deployment.
                 </p>
               </div>
               <div className="space-x-4">
@@ -294,14 +308,6 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center justify-center px-4 md:px-6 border-t text-center">
         <p className="text-xs text-muted-foreground">© 2024 SnapThink. All rights reserved.</p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Terms of Service
-          </Link>
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Privacy
-          </Link>
-        </nav>
       </footer>
     </div>
   )
