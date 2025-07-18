@@ -3,9 +3,9 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input"; // Make sure you have this component
+import { Input } from "@/components/ui/input";
 
-function DownloadExeModal() {
+function DownloadMacModal() {
   const [showForm, setShowForm] = useState(false);
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
@@ -21,17 +21,17 @@ function DownloadExeModal() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          data: [{ ExeDownloads: email }],
+          data: [{ MacDownloads: email }],  // Change this key for Mac entries
         }),
       });
 
       if (response.ok) {
         window.open(
-          "https://drive.google.com/file/d/1VsyIUYSXItl5lFBECnJ7CRKFjJaeKHed/view?usp=drive_link",
+          "https://drive.google.com/file/d/1VsyIUYSXItl5lFBECnJ7CRKFjJaeKHed/view?usp=drive_link",  // Replace with your Mac .dmg/.zip link
           "_blank"
         );
-        setShowForm(false); // close modal
-        setEmail(""); // reset email
+        setShowForm(false);
+        setEmail("");
       } else {
         alert("Failed to submit. Try again.");
       }
@@ -49,21 +49,21 @@ function DownloadExeModal() {
         className="bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-500 dark:hover:bg-blue-600"
         onClick={() => setShowForm(true)}
       >
-        Get Started - Windows
+        Get Started - Mac
       </Button>
 
       <Dialog open={showForm} onOpenChange={setShowForm}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <DialogTitle>Get Started with SnapThink</DialogTitle>
+            <DialogTitle>Get SnapThink for Mac</DialogTitle>
           </DialogHeader>
           <div className="space-y-4">
             <p className="text-sm text-muted-foreground">
-              Enter your email to download SnapThink for Windows and start using local AI. Completely free to get started.
+              Enter your email to download SnapThink for macOS. Enjoy fast, local AI on your Mac.
             </p>
             <div className="flex items-center gap-2 text-xs text-muted-foreground bg-muted/50 p-2 rounded">
-              <span>💻</span>
-              <span>Windows Version • Intel & AMD-series compatible</span>
+              <span>🍎</span>
+              <span>macOS version • Intel & M-series compatible</span>
             </div>
             <form onSubmit={handleSubmit} className="space-y-4">
               <Input
@@ -72,18 +72,16 @@ function DownloadExeModal() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full"
               />
               <Button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-500 dark:hover:bg-blue-600"
+                className="w-full bg-gray-800 hover:bg-gray-900 text-white"
                 disabled={loading}
               >
-                {loading ? "Processing..." : "Download for Windows"}
+                {loading ? "Processing..." : "Download for Mac"}
               </Button>
             </form>
-            
-            {/* Legal Disclaimers */}
+
             <div className="space-y-2 pt-2 border-t">
               <p className="text-xs text-muted-foreground">
                 By downloading, you consent to us using your email for product updates and support.
@@ -108,4 +106,4 @@ function DownloadExeModal() {
   );
 }
 
-export default DownloadExeModal;
+export default DownloadMacModal;

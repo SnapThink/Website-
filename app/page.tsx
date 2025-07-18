@@ -9,6 +9,8 @@ import ScheduleDemoModal  from '@/components/ScheduleDemoModal'
 import ContactSalesModal from '@/components/ContactSalesModal'
 import Image from 'next/image'
 import DownloadExeModal from '@/components/DownloadExeModal'
+import DownloadMacModal from '@/components/DownloadMacModal'
+import { Apple } from "lucide-react"
 
 export default function HomePage() {
   return (
@@ -56,6 +58,7 @@ export default function HomePage() {
               </div>
               <div className="space-x-4">
                 <DownloadExeModal />
+                <DownloadMacModal />
               </div>
               <div className="flex items-center space-x-4 text-sm text-muted-foreground">
                 <div className="flex items-center">
