@@ -11,6 +11,9 @@ import Image from 'next/image'
 import DownloadExeModal from '@/components/DownloadExeModal'
 import DownloadMacModal from '@/components/DownloadMacModal'
 import { Apple } from "lucide-react"
+import { Book } from "lucide-react";
+import { Bot } from "lucide-react";
+import { Video } from "lucide-react"
 
 export default function HomePage() {
   return (
@@ -77,6 +80,72 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Features and Plugins added*/}
+
+        <section className="py-20 bg-gradient-to-b from-zinc-900 to-zinc-800">
+          <div className="max-w-6xl mx-auto px-6 md:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
+              One Platform. Infinite Possibilities.
+            </h2>
+            <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-sm md:text-base">
+              SnapThink gives you more than just local AI — experiment, analyze, and build faster with these integrated tools.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Card>
+                <CardHeader className="text-center">
+                  <Book className="h-10 w-10 mb-2 text-primary mx-auto" />
+                  <CardTitle>Deep Research Notebooks</CardTitle>
+                  <CardDescription>
+                    Notebooks embedded in SnapThink for Deep Research and experimentation.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card>
+                <CardHeader className="text-center">
+                  <Bot className="h-10 w-10 mb-2 text-primary mx-auto" />
+                  <CardTitle>Robot Simulation Plugin</CardTitle>
+                  <CardDescription>
+                    Chat-based interface that understands and controls robot functions with LLMs.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card>
+                <CardHeader className="text-center">
+                  <Search className="h-10 w-10 mb-2 text-primary mx-auto" />
+                  <CardTitle>Data Analytics + Graphing</CardTitle>
+                  <CardDescription>
+                    Explore your data with built-in 2D/3D plots and analytical tools — no external tools needed.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card>
+                <CardHeader className="text-center">
+                  <Video className="h-10 w-10 mb-2 text-primary mx-auto" />
+                  <CardTitle>Screen Recording + Training</CardTitle>
+                  <CardDescription>
+                    Record demos or training sessions from within SnapThink — simple, built-in, and shareable.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card>
+                <CardHeader className="text-center">
+                  <Users className="h-10 w-10 mb-2 text-primary mx-auto" />
+                  <CardTitle>Multimodal Analysis</CardTitle>
+                  <CardDescription>
+                    Combine image, text, and sensor data into unified analysis.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </div>
+          </div>
+        </section>
+
 
         {/* Features Section */}
         <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
