@@ -27,7 +27,7 @@ function DownloadExeModal() {
 
       if (response.ok) {
         window.open(
-          "https://drive.google.com/file/d/1VsyIUYSXItl5lFBECnJ7CRKFjJaeKHed/view?usp=drive_link",
+          "https://drive.google.com/file/d/1rtCr1v7g2k9dACr6H3ZMOi1JslLmNWS7/view?usp=sharing",
           "_blank"
         );
         setShowForm(false); // close modal
@@ -95,7 +95,10 @@ function DownloadExeModal() {
                 • We may send occasional product updates (you can unsubscribe anytime)
               </p>
               <p className="text-xs text-muted-foreground">
-                • Free to use while we're building our community
+                • Free to use beta version
+              </p>
+              <p className="text-xs text-muted-foreground">
+                • SnapThink is provided for individual or organizational use only. Redistribution or resale is prohibited without a valid license agreement.
               </p>
               <p className="text-xs text-muted-foreground">
                 • Your data stays private and is never shared with third parties

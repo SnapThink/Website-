@@ -14,32 +14,61 @@ import { Apple } from "lucide-react"
 import { Book } from "lucide-react";
 import { Bot } from "lucide-react";
 import { Video } from "lucide-react"
+import Script from 'next/script'
+
+
 
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
+
       {/* Navigation */}
+      <Script
+        src="https://buttons.github.io/buttons.js"
+        strategy="afterInteractive"
+        />
+      
       <header className="px-4 lg:px-6 h-16 flex items-center justify-between border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+        {/* Logo */}
         <Link className="flex items-center space-x-2 flex-shrink-0" href="/">
-            <Image src="/icon.jpg" alt="Snapthink Logo" width={32} height={32} className="rounded-md" />
-            <span className="text-lg font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent hidden sm:block">
-              SnapThink
-            </span>
+          <Image src="/icon.jpg" alt="Snapthink Logo" width={32} height={32} className="rounded-md" />
+          <span className="text-lg font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent hidden sm:block">
+            SnapThink
+          </span>
         </Link>
-        <nav className="flex gap-2 sm:gap-4 lg:gap-6 text-center">
-          <Link className="text-xs sm:text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#features">
-            Features
-          </Link>
-          <Link className="text-xs sm:text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#models">
-            Models
-          </Link>
-          <Link className="text-xs sm:text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#about">
-            About
-          </Link>
-          <Link className="text-xs sm:text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#contact">
-            Contact
-          </Link>
-        </nav>
+
+        {/* Center nav and GitHub together */}
+        <div className="flex items-center gap-4">
+          {/* Nav links */}
+          <nav className="flex gap-2 sm:gap-4 lg:gap-6 text-center">
+            <Link className="text-xs sm:text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#features">
+              Features
+            </Link>
+            <Link className="text-xs sm:text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#models">
+              Models
+            </Link>
+            <Link className="text-xs sm:text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#about">
+              About
+            </Link>
+            <Link className="text-xs sm:text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#contact">
+              Contact
+            </Link>
+          </nav>
+
+          {/* GitHub Stars Button */}
+          <div className="hidden sm:block">
+            <a
+                className="github-button"
+                href="https://github.com/snapthinkllm/snapthinkllm"
+                data-icon="octicon-star"
+                data-size="large"
+                data-show-count="true"
+                aria-label="Star SnapThink on GitHub"
+                >
+                Star
+             </a>
+          </div>
+        </div>
       </header>
 
       <main className="flex-1">
@@ -48,21 +77,54 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
-                <h1 className="text-3xl font-normal" style={{ fontFamily: 'Segoe UI' }}>SnapThink</h1>
-
+                <h1 className="text-4xl font-bold tracking-tight lg:text-6xl flex items-center justify-center gap-2">
+                    <span className="text-sky-400">SnapThink</span>
+                        <span className="inline-flex items-center gap-1 px-3 py-0.5 rounded-full text-xs font-semibold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-sm">
+                        Beta
+                        </span>
+                </h1>
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  Enterprise AI That Stays
-                  <span className="text-primary"> Local</span>
+                  Powerful Simulations & AI - Without the Cloud
+                  {/* <span className="text-primary"> Local</span> */}
                 </h1>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
                   Deploy powerful language models on your infrastructure. Complete privacy, zero latency, unlimited
                   usage.
                 </p>
               </div>
-              <div className="space-x-4">
-                <DownloadExeModal />
-                <DownloadMacModal />
+              
+                <section id="download" className="scroll-target space-x-4">
+                <div className="space-x-4">
+                  <DownloadExeModal />
+                  <DownloadMacModal />
+                  </div>
+                </section>
+              
+              {/* GitHub Link with Icon */}
+              <div className="pt-2">
+                <a
+                  href="https://github.com/snapthinkllm/snapthinkllm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-white transition-colors"
+                >
+                  <svg
+                    className="w-5 h-5 mr-1"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 008 10.94c.58.11.79-.25.79-.56v-2.01c-3.26.71-3.95-1.57-3.95-1.57a3.11 3.11 0 00-1.3-1.71c-1.06-.72.08-.71.08-.71a2.47 2.47 0 011.79 1.21 2.51 2.51 0 003.43.98 2.52 2.52 0 01.75-1.58c-2.6-.3-5.33-1.3-5.33-5.79A4.53 4.53 0 015.7 6.63a4.22 4.22 0 01.11-3.13s.98-.31 3.2 1.2a11 11 0 015.82 0c2.22-1.51 3.2-1.2 3.2-1.2a4.22 4.22 0 01.11 3.13 4.52 4.52 0 011.2 3.13c0 4.5-2.74 5.49-5.34 5.78a2.83 2.83 0 01.81 2.2v3.27c0 .31.21.68.8.56A11.5 11.5 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"
+                    />
+                  </svg>
+                  GitHub
+                </a>
               </div>
+
+
               <div className="flex items-center space-x-4 text-sm text-muted-foreground">
                 <div className="flex items-center">
                   <CheckCircle className="h-4 w-4 mr-1 text-green-500" />
@@ -230,9 +292,8 @@ export default function HomePage() {
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12 text-center">
               <Card>
                 <CardHeader>
-                  <CardTitle className="flex flex-wrap items-center justify-between gap-2 text-left">
+                  <CardTitle>
                     <span>Llama 2 & Code Llama</span>
-                    <Badge variant="secondary">Popular</Badge>
                   </CardTitle>
                   <CardDescription>
                     Meta's powerful open-source models for general tasks and code generation. Optimized for enterprise
@@ -250,9 +311,9 @@ export default function HomePage() {
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle className="flex items-center justify-between">
-                    Mistral & Mixtral
-                    <Badge variant="secondary">High Performance</Badge>
+                  <CardTitle>
+                    Mistral
+                    {/*<Badge variant="secondary">High Performance</Badge>*/}
                   </CardTitle>
                   <CardDescription>
                     Efficient and powerful models from Mistral AI, perfect for production workloads with excellent
@@ -269,7 +330,7 @@ export default function HomePage() {
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Falcon & StarCoder</CardTitle>
+                  <CardTitle>Gemma 3</CardTitle>
                   <CardDescription>
                     Specialized models for specific use cases including code generation, analysis, and domain-specific
                     tasks.
@@ -317,7 +378,13 @@ export default function HomePage() {
                 </div>
                 <div className="flex justify-center mt-6 space-x-4">
                    <ScheduleDemoModal />
-                   <Button variant="outline">Read Documentation</Button>
+                   <a
+                    href="https://github.com/SnapThink/Documentations"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline">Read Documentation</Button>
+                  </a>
                  </div>
               </div>
               <div className="grid gap-4">
@@ -363,10 +430,12 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="space-x-4">
-                 <Button size="lg">
-                     Start Free Trial
+                 <a href="#download">
+                  <Button size="lg">
+                    Start Free Trial
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
+                </a>
                     <ContactSalesModal />
                </div>
               <p className="text-xs text-muted-foreground">

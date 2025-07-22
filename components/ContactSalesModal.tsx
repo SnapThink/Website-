@@ -17,7 +17,7 @@ export default function ContactSalesModal() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          data: [{ sales: email }], // 🔁 Use the 'sales' column
+          data: [{ sales: email }],
         }),
       })
 
@@ -70,10 +70,16 @@ export default function ContactSalesModal() {
                     Submit
                   </Button>
                 </div>
+                <p className="text-xs text-muted-foreground text-center mt-2">
+                  Or email us directly at <span className="font-medium">snapthinkllm@gmail.com</span>
+                </p>
               </form>
             ) : (
-              <div className="mt-4 text-green-600 dark:text-green-400">
-                Email submitted successfully!
+              <div className="mt-4 space-y-2 text-green-600 dark:text-green-400">
+                <p>Email submitted successfully!</p>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  For any queries, feel free to contact us at <span className="font-medium">snapthinkllm@gmail.com</span>
+                </p>
               </div>
             )}
           </Dialog.Panel>

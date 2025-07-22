@@ -46,11 +46,11 @@ function DownloadMacModal() {
   return (
     <>
       <Button
-        className="bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-500 dark:hover:bg-blue-600"
-        onClick={() => setShowForm(true)}
-      >
-        Get Started - Mac
-      </Button>
+          disabled
+          className="bg-gray-300 text-gray-500 cursor-not-allowed dark:bg-gray-700 dark:text-gray-400"
+        >
+          Stay Tuned – macOS
+        </Button>
 
       <Dialog open={showForm} onOpenChange={setShowForm}>
         <DialogContent className="sm:max-w-md">

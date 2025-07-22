@@ -17,6 +17,14 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-target {
+  scroll-margin-top: 1000px; /* Adjust as needed */
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
