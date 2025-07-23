@@ -27,7 +27,7 @@ function DownloadMacModal() {
 
       if (response.ok) {
         window.open(
-          "https://drive.google.com/file/d/1rtCr1v7g2k9dACr6H3ZMOi1JslLmNWS7/view?usp=sharing",  // Replace with your Mac .dmg/.zip link
+          "https://drive.google.com/file/d/1ixiwV9VZ8sLnwqgsFDAXrfq75B5JKFj6/view?usp=sharing",  // Replace with your Mac .dmg/.zip link
           "_blank"
         );
         setShowForm(false);
