@@ -15,10 +15,11 @@ import { Book } from "lucide-react";
 import { Bot } from "lucide-react";
 import { Video } from "lucide-react"
 import Script from 'next/script'
-
-
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 
 export default function HomePage() {
+  const [menuOpen, setMenuOpen] = useState(false)
   return (
     <div className="flex flex-col min-h-screen">
 
@@ -38,24 +39,65 @@ export default function HomePage() {
         </Link>
 
         {/* Center nav and GitHub together */}
-        <div className="flex items-center gap-4">
-          {/* Nav links */}
-          <nav className="flex gap-2 sm:gap-4 lg:gap-6 text-center">
-            <Link className="text-xs sm:text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#features">
+       <div className="flex items-center gap-4">
+       
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex gap-4 lg:gap-6 text-center">
+            <Link className="text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#features">
               Features
             </Link>
-            <Link className="text-xs sm:text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#models">
+            <Link className="text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#models">
               Models
             </Link>
-            <Link className="text-xs sm:text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#about">
+            <Link className="text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#about">
               About
             </Link>
-            <Link className="text-xs sm:text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#contact">
+            <Link className="text-sm font-medium hover:underline underline-offset-4 px-2 py-1" href="#contact">
               Contact
             </Link>
           </nav>
+          
 
           {/* GitHub Stars Button */}
+          <div className="hidden sm:block">
+                <a
+                  className="github-button"
+                  href="https://github.com/snapthinkllm/snapthinkllm"
+                  data-icon="octicon-star"
+                  data-size="large"
+                  data-show-count="true"
+                  aria-label="Star SnapThink on GitHub"
+                >
+                  Star
+                </a>
+              </div>
+
+              
+          {/* Hamburger button for mobile */}
+          <button
+            className="md:hidden text-muted-foreground"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+          
+          {/* Mobile Dropdown Nav */}
+          {menuOpen && (
+            <div className="md:hidden bg-white dark:bg-gray-900 shadow-lg z-40 px-4 py-4 border-b">
+              <nav className="flex flex-col gap-3 text-sm">
+                <Link onClick={() => setMenuOpen(false)} href="#features" className="hover:underline">Features</Link>
+                <Link onClick={() => setMenuOpen(false)} href="#models" className="hover:underline">Models</Link>
+                <Link onClick={() => setMenuOpen(false)} href="#about" className="hover:underline">About</Link>
+                <Link onClick={() => setMenuOpen(false)} href="#contact" className="hover:underline">Contact</Link>
+                      </nav>
+                    </div>
+              )
+            }
+
+            </div>
+            </header>
+          {/* GitHub Stars Button 
           <div className="hidden sm:block">
             <a
                 className="github-button"
@@ -69,7 +111,7 @@ export default function HomePage() {
              </a>
           </div>
         </div>
-      </header>
+      </header>*/}
 
       <main className="flex-1">
         {/* Hero Section */}
@@ -106,7 +148,7 @@ export default function HomePage() {
                   href="https://github.com/snapthinkllm/snapthinkllm"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-white transition-colors"
+                  className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-white transition-colors border border-gray-900 rounded px-5 py-1.5"
                 >
                   <svg
                     className="w-5 h-5 mr-1"
