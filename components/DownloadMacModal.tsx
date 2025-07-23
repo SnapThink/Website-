@@ -27,7 +27,7 @@ function DownloadMacModal() {
 
       if (response.ok) {
         window.open(
-          "https://drive.google.com/file/d/1VsyIUYSXItl5lFBECnJ7CRKFjJaeKHed/view?usp=drive_link",  // Replace with your Mac .dmg/.zip link
+          "https://drive.google.com/file/d/1ixiwV9VZ8sLnwqgsFDAXrfq75B5JKFj6/view?usp=sharing",  // Replace with your Mac .dmg/.zip link
           "_blank"
         );
         setShowForm(false);
@@ -46,11 +46,11 @@ function DownloadMacModal() {
   return (
     <>
       <Button
-          disabled
-          className="bg-gray-300 text-gray-500 cursor-not-allowed dark:bg-gray-700 dark:text-gray-400"
-        >
-          Stay Tuned – macOS
-        </Button>
+        className="bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-500 dark:hover:bg-blue-600"
+        onClick={() => setShowForm(true)}
+      >
+        Get Started - MacOS
+      </Button>
 
       <Dialog open={showForm} onOpenChange={setShowForm}>
         <DialogContent className="sm:max-w-md">
@@ -64,6 +64,7 @@ function DownloadMacModal() {
             <div className="flex items-center gap-2 text-xs text-muted-foreground bg-muted/50 p-2 rounded">
               <span>🍎</span>
               <span>macOS version • Intel & M-series compatible</span>
+              <span>Only for Apple silicon</span>
             </div>
             <form onSubmit={handleSubmit} className="space-y-4">
               <Input
