@@ -27,7 +27,7 @@ function DownloadExeModal() {
 
       if (response.ok) {
         window.open(
-          "https://drive.google.com/file/d/1rtCr1v7g2k9dACr6H3ZMOi1JslLmNWS7/view?usp=sharing",
+          "https://drive.google.com/file/d/1O_3jPHCBr01zYvlsnFbsrBEubFjF7kRK/view?usp=sharing",
           "_blank"
         );
         setShowForm(false); // close modal
