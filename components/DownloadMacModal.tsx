@@ -46,10 +46,11 @@ function DownloadMacModal() {
   return (
     <>
       <Button
+        disabled
         className="bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-500 dark:hover:bg-blue-600"
         onClick={() => setShowForm(true)}
       >
-        Get Started - MacOS
+        Coming soon - MacOS
       </Button>
 
       <Dialog open={showForm} onOpenChange={setShowForm}>
