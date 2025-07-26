@@ -136,7 +136,7 @@ export default function HomePage() {
               </div>
               
                 <section id="download" className="scroll-target space-x-4">
-                <div className="space-x-4">
+                <div className="space-x-2">
                   <DownloadExeModal />
                   <DownloadMacModal />
                   </div>
