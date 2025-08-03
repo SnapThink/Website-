@@ -126,12 +126,11 @@ export default function HomePage() {
                         </span>
                 </h1>
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                  Powerful Simulations & AI - Without the Cloud
+                  Build, Simulate, and Control Robots - Faster Than Ever.
                   {/* <span className="text-primary"> Local</span> */}
                 </h1>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  Deploy powerful language models on your infrastructure. Complete privacy, zero latency, unlimited
-                  usage.
+                  Natural language to working simulation in seconds. Powered by AI. Designed for robotics.
                 </p>
               </div>
               
@@ -193,14 +192,14 @@ export default function HomePage() {
               One Platform. Infinite Possibilities.
             </h2>
             <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-sm md:text-base">
-              SnapThink gives you more than just local AI — experiment, analyze, and build faster with these integrated tools.
+              Snapthink combines large language models with physics-based simulation, giving you an interactive loop to build and test robotic behavior—without writing low-level code.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card>
                 <CardHeader className="text-center">
                   <Book className="h-10 w-10 mb-2 text-primary mx-auto" />
-                  <CardTitle>Deep Research Notebooks</CardTitle>
+                  <CardTitle>Natural Language to Code</CardTitle>
                   <CardDescription>
                     Notebooks embedded in SnapThink for Deep Research and experimentation.
                   </CardDescription>
@@ -220,9 +219,9 @@ export default function HomePage() {
               <Card>
                 <CardHeader className="text-center">
                   <Search className="h-10 w-10 mb-2 text-primary mx-auto" />
-                  <CardTitle>Data Analytics + Graphing</CardTitle>
+                  <CardTitle>Predictive Analytics on Robotics Data</CardTitle>
                   <CardDescription>
-                    Explore your data with built-in 2D/3D plots and analytical tools — no external tools needed.
+                    Explore Robotics data with built-in 2D/3D plots and analytical tools — no external tools needed.
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -240,9 +239,9 @@ export default function HomePage() {
               <Card>
                 <CardHeader className="text-center">
                   <Users className="h-10 w-10 mb-2 text-primary mx-auto" />
-                  <CardTitle>Multimodal Analysis</CardTitle>
+                  <CardTitle> Ready for Real Robot Deployment</CardTitle>
                   <CardDescription>
-                    Combine image, text, and sensor data into unified analysis.
+                    Simulate with confidence—deploy the same logic to real robots without rewriting code.
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -256,7 +255,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Why Choose Local AI?</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">The power of cloud, the privacy of local - your choice</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Experience the power of AI without compromising on privacy, performance, or cost.
                 </p>
@@ -325,48 +324,40 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Integrated Models</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">AI Models for Robotics</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Choose from our curated selection of state-of-the-art language models, optimized for local deployment.
+                  Choose from our curated set of large language models, optimized for generating robot control code, sim behavior, and domain-specific logic—available both locally and in the cloud.
                 </p>
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12 text-center">
               <Card>
                 <CardHeader>
-                  <CardTitle>
-                    <span>Llama 2 & Code Llama</span>
-                  </CardTitle>
+                  <CardTitle>AI Models for Robotics — with Chat Interface</CardTitle>
                   <CardDescription>
-                    Meta's powerful open-source models for general tasks and code generation. Optimized for enterprise
-                    use.
+                     A natural-language interface to generate, debug, and refine robot behavior. Ask questions, explore environments, and get simulation-ready code instantly.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline">7B</Badge>
-                    <Badge variant="outline">13B</Badge>
-                    <Badge variant="outline">70B</Badge>
-                    <Badge variant="outline">Code</Badge>
-                  </div>
+                    <div className="flex flex-wrap gap-2">
+                        <Badge variant="outline">ChatGPT</Badge>
+                        <Badge variant="outline">Gemini</Badge>
+                     </div>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>
-                    Mistral
-                    {/*<Badge variant="secondary">High Performance</Badge>*/}
-                  </CardTitle>
+                  <CardTitle>Llama 3 & Code Llama</CardTitle>
                   <CardDescription>
-                    Efficient and powerful models from Mistral AI, perfect for production workloads with excellent
-                    performance.
+                     Meta’s open-source models adapted for robot control tasks, Python generation, and simulation logic. Lightweight and fine-tunable.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
                   <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline">7B</Badge>
-                    <Badge variant="outline">8x7B</Badge>
-                    <Badge variant="outline">Instruct</Badge>
+                    <Badge variant="outline">8B</Badge>
+                    <Badge variant="outline">70B</Badge>
+                    <Badge variant="outline">Code</Badge>
+                    <Badge variant="outline">On-device</Badge>
                   </div>
                 </CardContent>
               </Card>
@@ -374,37 +365,37 @@ export default function HomePage() {
                 <CardHeader>
                   <CardTitle>Gemma 3</CardTitle>
                   <CardDescription>
-                    Specialized models for specific use cases including code generation, analysis, and domain-specific
-                    tasks.
+                    Task-specialized models with strong performance in control synthesis, reinforcement learning scaffolding, and planning logic.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="outline">7B</Badge>
                     <Badge variant="outline">40B</Badge>
-                    <Badge variant="outline">Code</Badge>
-                    <Badge variant="outline">Instruct</Badge>
+                    <Badge variant="outline">Control Logic</Badge>
+                    <Badge variant="outline">RL Tasks</Badge>
                   </div>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Custom Models</CardTitle>
+                  <CardTitle>Custom & Fine-Tuned</CardTitle>
                   <CardDescription>
-                    Bring your own fine-tuned models or let us help you create custom solutions for your specific needs.
+                    Bring your own LLMs or let us help you fine-tune models for your robot hardware, simulation stack, or domain-specific workflows.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="outline">Fine-tuned</Badge>
-                    <Badge variant="outline">Domain-specific</Badge>
-                    <Badge variant="outline">Custom</Badge>
+                    <Badge variant="outline">Robot-Specific</Badge>
+                    <Badge variant="outline">Custom Control</Badge>
                   </div>
                 </CardContent>
               </Card>
             </div>
           </div>
         </section>
+
 
         {/* About Section */}
         <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
@@ -466,8 +457,8 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Ready to Deploy Local AI?</h2>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Run Robotics AI Anywhere — Locally or in the Cloud</h2>
+                <p className="max-w-[1000px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-center">
                   Get started with our free trial and experience the power of local AI deployment.
                 </p>
               </div>
