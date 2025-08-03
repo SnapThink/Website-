@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'SnapThink',
   description: 'Platform for LLMs',
   generator: 'Snapthink',
+  icons: {
+    icon: '/snapthink-logo.ico',
+  },
 }
 
 export default function RootLayout({

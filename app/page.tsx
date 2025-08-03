@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowRight, Brain, Shield, Zap, Server, Users, CheckCircle, Search } from "lucide-react"
+import { ArrowRight, Brain, Shield, Zap, Server, Users, CheckCircle, Search, Clock, Wrench, TrendingUp, RotateCcw, Play } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -169,17 +169,120 @@ export default function HomePage() {
               <div className="flex items-center space-x-4 text-sm text-muted-foreground">
                 <div className="flex items-center">
                   <CheckCircle className="h-4 w-4 mr-1 text-green-500" />
-                  No data leaves your servers
+                  Natural language to robot control
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="h-4 w-4 mr-1 text-green-500" />
-                  15+ integrated models
+                  Physics simulation environments
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="h-4 w-4 mr-1 text-green-500" />
-                  Enterprise ready
+                  Real robot deployment ready
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Problem Statement Section */}
+        <section className="py-20 bg-gradient-to-b from-zinc-50 to-white dark:from-zinc-950 dark:to-zinc-900">
+          <div className="max-w-6xl mx-auto px-6 md:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
+              Robotics Development Shouldn't Be This Hard
+            </h2>
+            <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-12 text-sm md:text-base">
+              We've experienced the pain firsthand: countless hours wasted on tool setup, environment configuration, and manual iteration between code and simulation. The steep learning curve and fragmented toolchain creates a nightmare for knowledge transfer and auditing.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              <Card className="text-center">
+                <CardHeader>
+                  <Clock className="h-10 w-10 mb-2 text-red-500 mx-auto" />
+                  <CardTitle className="text-lg">Painfully Slow</CardTitle>
+                  <CardDescription>
+                    Hours wasted on setup and configuration instead of building
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="text-center">
+                <CardHeader>
+                  <Wrench className="h-10 w-10 mb-2 text-orange-500 mx-auto" />
+                  <CardTitle className="text-lg">Tool Fragmentation</CardTitle>
+                  <CardDescription>
+                    Disparate tools that don't work well together
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="text-center">
+                <CardHeader>
+                  <TrendingUp className="h-10 w-10 mb-2 text-yellow-500 mx-auto" />
+                  <CardTitle className="text-lg">High Barrier to Entry</CardTitle>
+                  <CardDescription>
+                    Deep robotics knowledge required to get started
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="text-center">
+                <CardHeader>
+                  <RotateCcw className="h-10 w-10 mb-2 text-purple-500 mx-auto" />
+                  <CardTitle className="text-lg">Manual Iteration</CardTitle>
+                  <CardDescription>
+                    Slow feedback loops between code and simulation
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </div>
+
+            <div className="text-center">
+              <h3 className="text-2xl font-bold mb-4">
+                SnapThink Solves These Problems
+              </h3>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                One platform that unifies natural language commands, instant simulation, and seamless iteration. From prototype to production, without the complexity.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Video Demo Section */}
+        <section className="py-20 bg-gradient-to-b from-white to-zinc-50 dark:from-zinc-900 dark:to-zinc-950">
+          <div className="max-w-6xl mx-auto px-6 md:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                See SnapThink In Action
+              </h2>
+              <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8 text-sm md:text-base">
+                Watch how natural language commands transform into working robot simulations in seconds. From simple requests to complex behaviors, see the power of AI-driven robotics development.
+              </p>
+            </div>
+
+            <div className="relative max-w-4xl mx-auto">
+              <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border bg-zinc-100 dark:bg-zinc-800">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/HGA4uKR6GF0"
+                  title="SnapThink Demo - Natural Language Robot Control"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              
+              {/* Optional: Add a play button overlay for custom styling */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 hover:opacity-100 transition-opacity">
+                <div className="bg-primary/10 backdrop-blur-sm rounded-full p-4">
+                  <Play className="h-12 w-12 text-primary" />
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-8">
+              <p className="text-sm text-muted-foreground">
+                2-minute demo showing natural language to robot simulation workflow
+              </p>
             </div>
           </div>
         </section>
@@ -238,10 +341,50 @@ export default function HomePage() {
 
               <Card>
                 <CardHeader className="text-center">
-                  <Users className="h-10 w-10 mb-2 text-primary mx-auto" />
-                  <CardTitle> Ready for Real Robot Deployment</CardTitle>
+                  <ArrowRight className="h-10 w-10 mb-2 text-primary mx-auto" />
+                  <CardTitle>Instant Code-to-Sim Loop</CardTitle>
                   <CardDescription>
-                    Simulate with confidence—deploy the same logic to real robots without rewriting code.
+                    Test, refine, and optimize robot behavior in seconds, not hours. Seamless natural language workflow.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card>
+                <CardHeader className="text-center">
+                  <Shield className="h-10 w-10 mb-2 text-primary mx-auto" />
+                  <CardTitle>Multi-Physics Engine Support</CardTitle>
+                  <CardDescription>
+                    PyBullet, MuJoCo, and Isaac Sim environments integrated. Switch between physics engines based on your needs.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card>
+                <CardHeader className="text-center">
+                  <Zap className="h-10 w-10 mb-2 text-primary mx-auto" />
+                  <CardTitle>Real-Time Visualization</CardTitle>
+                  <CardDescription>
+                    Watch your robots move in real-time with built-in 3D visualization and physics debugging tools.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card>
+                <CardHeader className="text-center">
+                  <Brain className="h-10 w-10 mb-2 text-primary mx-auto" />
+                  <CardTitle>AI-Powered Code Generation</CardTitle>
+                  <CardDescription>
+                    From "pick up the red cube" to optimized control algorithms - AI writes the robot code for you.
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card>
+                <CardHeader className="text-center">
+                  <CheckCircle className="h-10 w-10 mb-2 text-primary mx-auto" />
+                  <CardTitle>Test & Validate Behaviors</CardTitle>
+                  <CardDescription>
+                    Run comprehensive tests on robot behaviors with built-in validation tools and performance metrics.
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -255,9 +398,9 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">The power of cloud, the privacy of local - your choice</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">From Simulation to Reality</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Experience the power of AI without compromising on privacy, performance, or cost.
+                  Develop robot behaviors in simulation with confidence, knowing they'll work on real hardware. Complete privacy options available.
                 </p>
               </div>
             </div>
@@ -333,15 +476,17 @@ export default function HomePage() {
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12 text-center">
               <Card>
                 <CardHeader>
-                  <CardTitle>AI Models for Robotics — with Chat Interface</CardTitle>
+                  <CardTitle>OpenAI Models</CardTitle>
                   <CardDescription>
-                     A natural-language interface to generate, debug, and refine robot behavior. Ask questions, explore environments, and get simulation-ready code instantly.
+                     GPT-4, GPT-4 Turbo, and GPT-3.5 with cloud-based processing for maximum performance in robotics code generation and complex reasoning tasks.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
                     <div className="flex flex-wrap gap-2">
-                        <Badge variant="outline">ChatGPT</Badge>
-                        <Badge variant="outline">Gemini</Badge>
+                        <Badge variant="outline">GPT-4</Badge>
+                        <Badge variant="outline">GPT-4 Turbo</Badge>
+                        <Badge variant="outline">GPT-3.5</Badge>
+                        <Badge variant="outline">Cloud</Badge>
                      </div>
                 </CardContent>
               </Card>
@@ -457,22 +602,22 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Run Robotics AI Anywhere — Locally or in the Cloud</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Start Building Robots with Natural Language Today</h2>
                 <p className="max-w-[1000px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-center">
-                  Get started with our free trial and experience the power of local AI deployment.
+                  Join researchers and engineers already using SnapThink to accelerate their robotics development. Download now and experience the future of robot control.
                 </p>
               </div>
               <div className="space-x-4">
                  <a href="#download">
                   <Button size="lg">
-                    Start Free Trial
+                    Download SnapThink
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </a>
                     <ContactSalesModal />
                </div>
               <p className="text-xs text-muted-foreground">
-                No credit card required • 30-day free trial • Enterprise support included
+                Free to download • Windows & Mac supported • Open source
               </p>
             </div>
           </div>
