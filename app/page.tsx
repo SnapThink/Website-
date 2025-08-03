@@ -130,7 +130,7 @@ export default function HomePage() {
                   {/* <span className="text-primary"> Local</span> */}
                 </h1>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  Natural language to working simulation in seconds. Powered by AI. Designed for robotics.
+                  Natural language to working simulation in seconds. Plus intelligent analytics for predictive maintenance. Powered by AI. Designed for robotics.
                 </p>
               </div>
               
@@ -173,7 +173,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="h-4 w-4 mr-1 text-green-500" />
-                  Physics simulation environments
+                  Predictive maintenance analytics
                 </div>
                 <div className="flex items-center">
                   <CheckCircle className="h-4 w-4 mr-1 text-green-500" />
@@ -255,7 +255,7 @@ export default function HomePage() {
                 See SnapThink In Action
               </h2>
               <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8 text-sm md:text-base">
-                Watch how natural language commands transform into working robot simulations in seconds. From simple requests to complex behaviors, see the power of AI-driven robotics development.
+                Watch how natural language commands transform into working robot simulations AND intelligent predictive maintenance analytics. From simple robot control to complex data insights, see the complete AI-driven robotics platform in action.
               </p>
             </div>
 
@@ -281,7 +281,7 @@ export default function HomePage() {
 
             <div className="text-center mt-8">
               <p className="text-sm text-muted-foreground">
-                2-minute demo showing natural language to robot simulation workflow
+                2-minute demo: Natural language robot control + Predictive maintenance analytics
               </p>
             </div>
           </div>
@@ -295,7 +295,7 @@ export default function HomePage() {
               One Platform. Infinite Possibilities.
             </h2>
             <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12 text-sm md:text-base">
-              Snapthink combines large language models with physics-based simulation, giving you an interactive loop to build and test robotic behavior—without writing low-level code.
+              Snapthink combines large language models with physics-based simulation AND intelligent data analytics, giving you an interactive loop to build, test, and optimize robotic behavior while gaining predictive insights—all without writing low-level code.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -322,9 +322,9 @@ export default function HomePage() {
               <Card>
                 <CardHeader className="text-center">
                   <Search className="h-10 w-10 mb-2 text-primary mx-auto" />
-                  <CardTitle>Predictive Analytics on Robotics Data</CardTitle>
+                  <CardTitle>Predictive Maintenance Analytics</CardTitle>
                   <CardDescription>
-                    Explore Robotics data with built-in 2D/3D plots and analytical tools — no external tools needed.
+                    AI-powered insights for robot health monitoring, failure prediction, and maintenance optimization — all through natural language queries.
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -382,9 +382,9 @@ export default function HomePage() {
               <Card>
                 <CardHeader className="text-center">
                   <CheckCircle className="h-10 w-10 mb-2 text-primary mx-auto" />
-                  <CardTitle>Test & Validate Behaviors</CardTitle>
+                  <CardTitle>Interactive Data Analytics</CardTitle>
                   <CardDescription>
-                    Run comprehensive tests on robot behaviors with built-in validation tools and performance metrics.
+                    Explore robotics data with built-in 2D/3D visualizations and analytical tools — ask questions in natural language, get instant insights.
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -398,9 +398,9 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">From Simulation to Reality</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">From Simulation to Reality with Intelligence</h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Develop robot behaviors in simulation with confidence, knowing they'll work on real hardware. Complete privacy options available.
+                  Develop robot behaviors in simulation with confidence, gain predictive maintenance insights, and deploy to real hardware. Complete analytics and privacy options available.
                 </p>
               </div>
             </div>
@@ -602,9 +602,9 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Start Building Robots with Natural Language Today</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Start Building Robots with AI-Powered Analytics Today</h2>
                 <p className="max-w-[1000px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-center">
-                  Join researchers and engineers already using SnapThink to accelerate their robotics development. Download now and experience the future of robot control.
+                  Join researchers and engineers already using SnapThink to accelerate their robotics development with natural language control AND predictive maintenance insights. Download now and experience the future of intelligent robotics.
                 </p>
               </div>
               <div className="space-x-4">
